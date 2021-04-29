@@ -4,5 +4,7 @@ class Admin::DashboardController < ApplicationController
                                if: -> { ENV["password"].present? }
   
   def show
+    @products = Product.count
+    @categories = Category.count
   end
 end
