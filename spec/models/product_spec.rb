@@ -5,6 +5,7 @@ RSpec.describe Product, type: :model do
     @category = Category.new(:name => "Apparel")
   end
   describe 'Validations' do
+    
     it "should check that all four fields save successfully" do
       products = Product.new(name: "Red Bookshelf", price: 20, quantity: 1, category: @category)
       expect(products).to be_valid
